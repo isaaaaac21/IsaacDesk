@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+*:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+/* Start SideBar */
+.page {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* End SideBar */
