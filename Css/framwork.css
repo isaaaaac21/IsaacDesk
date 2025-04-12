@@ -1,34 +1,117 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
 /* Start box */
+@media (max-width: 767px) {
+  .block-mobile {
+    display: block;
+  }
+}
 .d-flex {
   display: flex;
+}
+.d-block {
+  display: block;
 }
 .align-center {
   align-items: center;
 }
-
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-around {
+  justify-content: space-around;
+}
+@media (max-width: 767px) {
+  .col-mobile {
+    flex-direction: column;
+  }
+}
+.w-full {
+  width: 100%;
+}
+.d-grid {
+  display: grid;
+}
+.gap-20 {
+  gap: 20px;
+}
+.w-fit {
+  width: fit-content;
+}
 /* End box */
 /* Start padding + margin */
+.m-0 {
+  margin: 0;
+}
 .m-20 {
   margin: 20px;
 }
 .mt-0 {
   margin-top: 0;
 }
+.mt-5 {
+  margin-top: 5px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.p-5 {
+  padding: 5px;
+}
 .p-10 {
   padding: 10px;
+}
+.p-15 {
+  padding: 15px;
 }
 .p-20 {
   padding: 20px;
 }
+.pt-5 {
+  padding-top: 5px;
+}
+.pr-10 {
+  padding-right: 10px;
+}
 /* End padding + margin */
-/* Start color */
+
+/* Start Background */
 .bg-white {
   background-color: white;
 }
+.bg-eee {
+  background-color: #eee;
+}
+.bg-blue {
+  background-color: var(--blue-color);
+}
+/* End Background */
+
+/* Start color */
+
 .c-black {
   color: black;
 }
+.c-grey {
+  color: var(--grey-color);
+}
+.c-white {
+  color: white;
+}
 /* End color */
+
 /* Start Position */
 .p-relative {
   position: relative;
@@ -38,12 +121,57 @@
 .txt-c {
   text-align: center;
 }
+@media (max-width: 767px) {
+  .text-c-mobile {
+    text-align: center;
+  }
+}
 .fs-14 {
   font-size: 14;
+}
+.fs-13 {
+  font-size: 13px;
 }
 /* End font */
 /* Start Border */
 .rad-6 {
   border-radius: 6px;
 }
+.rad-10 {
+  border-radius: 10px;
+}
+.bor-none {
+  border: none;
+}
 /* End Border */
+
+/* Start Mobile */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* End Mobile */
+
+/* Start img */
+.m-w-35 {
+  max-width: 35px;
+}
+/* end img */
+
+/* Start component */
+.between-flex {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.btn-shape {
+}
+/* end component */
+.ovr-hidden {
+  overflow: hidden;
+}

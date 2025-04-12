@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="page d-flex">
-      <aside class="p-20 bg-white p-relative">
+      <aside class="p-10 bg-white p-relative">
         <h3 class="p-relative txt-c">Isaac</h3>
         <ul class="lis-none">
           <li>
@@ -30,50 +30,134 @@
               href="#"
               class="active d-flex align-center fs-14 c-black rad-6 p-10"
             >
-              <i class="fa-solid fa-chart-bar fa-fw"></i> <span>Dashbord</span>
+              <i class="fa-solid fa-chart-bar fa-fw"></i>
+              <span class="hide-mobile">Dashbord</span>
             </a>
           </li>
           <li>
-            <a href="#">
-              <i class="fa-solid fa-gear fa-fw"></i> <span>Settings</span>
+            <a href="#" class="d-flex align-center fs-14 c-black rad-6 p-10">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span class="hide-mobile">Settings</span>
             </a>
           </li>
           <li>
-            <a href="#">
-              <i class="fa-regular fa-user fa-fw"></i> <span>Profile</span>
+            <a href="#" class="d-flex align-center fs-14 c-black rad-6 p-10">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span class="hide-mobile">Profile</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" class="d-flex align-center fs-14 c-black rad-6 p-10">
               <i class="fa-solid fa-code-branch fa-fw"></i>
-              <span>Projects</span>
+              <span class="hide-mobile">Projects</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" class="d-flex align-center fs-14 c-black rad-6 p-10">
               <i class="fa-solid fa-graduation-cap fa-fw"></i>
-              <span>Courses</span>
+              <span class="hide-mobile">Courses</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" class="d-flex align-center fs-14 c-black rad-6 p-10">
               <i class="fa-regular fa-circle-user fa-fw"></i>
-              <span>Friends</span>
+              <span class="hide-mobile">Friends</span>
             </a>
           </li>
           <li>
-            <a href="#">
-              <i class="fa-regular fa-file fa-fw"></i> <span>Files</span>
+            <a href="#" class="d-flex align-center fs-14 c-black rad-6 p-10">
+              <i class="fa-regular fa-file fa-fw"></i>
+              <span class="hide-mobile">Files</span>
             </a>
           </li>
           <li>
-            <a href="#">
-              <i class="fa-regular fa-credit-card fa-fw"></i> <span>Plans</span>
+            <a href="#" class="d-flex align-center fs-14 c-black rad-6 p-10">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span class="hide-mobile"> Plans</span>
             </a>
           </li>
         </ul>
       </aside>
-      <div class="content">Content</div>
+      <div class="content w-full">
+        <!-- Start Head -->
+        <div class="head between-flex p-10 bg-white">
+          <div class="search d-flex align-center p-10">
+            <input
+              type="search"
+              name="search"
+              id=""
+              class="p-10"
+              placeholder="Type a keyword"
+            />
+          </div>
+          <div class="icns">
+            <i class="fa-regular fa-bell"></i>
+            <img class="m-w-35" src="images/per2.png" alt="" />
+          </div>
+        </div>
+        <!-- end Head -->
+        <h1 class="p-relative">Dashbord</h1>
+
+        <div class="wrapper d-grid gap-20">
+          <!-- Start Welcom -->
+          <div
+            class="welcome rad-10 text-c-mobile bg-white block-mobile ovr-hidden"
+          >
+            <div class="head p-20 d-flex justify-between bg-eee">
+              <div class="text">
+                <h2 class="m-0">Welcome</h2>
+                <span class="c-grey mb-10">Isaac Hk</span>
+              </div>
+              <img
+                class="hide-mobile"
+                src="images/dashbord/welcome.png"
+                alt="Welcome img"
+              />
+            </div>
+            <div class="main p-relative">
+              <img src="images/per2.png" alt="" />
+              <div class="info d-flex justify-around col-mobile">
+                <div class="box one">
+                  <span>Isaac Hadj Kouider</span>
+                  <span>Developer</span>
+                </div>
+                <div class="box two">
+                  <span>80</span>
+                  <span>Projects</span>
+                </div>
+                <div class="box three">
+                  <span>0$</span>
+                  <span>Earned</span>
+                </div>
+              </div>
+              <a href="#" class="p-10 rad-6 w-fit d-flex bg-blue">Profile</a>
+            </div>
+          </div>
+          <!-- End welcome -->
+          <!-- Start Quick Draft -->
+          <div class="draft p-20 bg-white">
+            <h2 class="m-0">Quick Draft</h2>
+            <p class="mt-10 mb-20 c-grey">Write A Draft For Your Ideas</p>
+            <input
+              class="mt-10 mb-20 bg-eee p-10 d-block bor-none rad-6 fs-13"
+              type="text"
+              placeholder="Title"
+            />
+            <textarea
+              name="textarea"
+              id=""
+              class="bg-eee d-block p-10 bor-none mb-20 rad-6 fs-13"
+              placeholder="Your Thought"
+            ></textarea>
+            <input
+              type="submit"
+              value="save"
+              class="bg-blue p-5 fs-14 c-white rad-6 bor-none w-fit d-block d-flex"
+            />
+          </div>
+          <!-- End Quick Draft -->
+        </div>
+      </div>
     </div>
   </body>
 </html>

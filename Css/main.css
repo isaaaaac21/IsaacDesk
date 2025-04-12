@@ -1,7 +1,16 @@
 * {
   box-sizing: border-box;
 }
-
+:root {
+  --main-transition: 0.3s;
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -11,13 +20,284 @@ body {
 a {
   text-decoration: none;
 }
-/* Start SideBar */
-.page {
-  background-color: #f1f5f9;
-  min-height: 100vh;
-}
 ul {
   list-style: none;
   padding: 0;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
+}
+.page {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+/* Start SideBar */
+.page aside {
+  width: 250px;
+  box-shadow: 0 0 10px #ddd;
+}
+@media (max-width: 767px) {
+  .page aside {
+    width: 62px;
+    padding: 10px;
+  }
+}
+.page aside h3 {
+  font-size: 23px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .page aside h3 {
+    font-size: 18px;
+  }
+}
+.page aside h3::before {
+  content: "";
+  width: 80px;
+  height: 3px;
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+}
+
+.page aside h3::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background-color: black;
+  bottom: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 5px solid white;
+}
+@media (max-width: 767px) {
+  .page aside h3:before,
+  .page aside h3:after {
+    display: none;
+  }
+}
+.page aside ul {
+}
+.page aside ul li {
+}
+.page aside ul li a {
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+.page aside ul li a:hover,
+.page aside ul li a.active {
+  background-color: #eee;
+}
+.page aside ul li i {
+  margin-right: 10px;
+}
+.page aside ul li a span {
+  font-size: 14px;
+}
+
 /* End SideBar */
+
+/* *******Start Conent ********/
+/* Start head */
+.content {
+}
+.content .head {
+}
+
+.content .head .search {
+  position: relative;
+}
+.content .head .search::before {
+  content: "\f002";
+  font-family: var(--fa-style-family-classic);
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: var(--grey-color);
+  font-size: 14px;
+}
+.content .head .search input {
+  font-size: 13px;
+  border: 1px solid var(--grey-color);
+  padding-left: 30px;
+  border-radius: 10px;
+  width: 160px;
+  transition: var(--main-transition);
+}
+@media (min-width: 991px) {
+  .content .head .search input:focus {
+    width: 200px;
+  }
+}
+
+.content .head .search input:focus::placeholder {
+  opacity: 0;
+}
+.content .head .icns {
+  position: relative;
+}
+.content .head .icns i {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.content .head .icns i::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  top: -7px;
+  right: -5px;
+}
+.content .head .icns img {
+}
+/* End head */
+.page h1 {
+  margin: 20px 20px 40px;
+  font-size: 35px;
+}
+.page h1::before,
+.page h1::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+.page h1::before {
+  width: 130px;
+  background-color: white;
+}
+.page h1::after {
+  width: 50px;
+  background-color: black;
+}
+/* Start wrapper */
+.wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .wrapper {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.wrapper > div {
+  border-radius: 10px;
+}
+/* Start welcome */
+.wrapper .welcome {
+}
+
+.wrapper .welcome .head .text {
+}
+.wrapper .welcome .head .text h2 {
+  font-size: 25px;
+}
+.wrapper .welcome .head .text span {
+  display: block;
+  margin-top: 5px;
+  font-size: 16px;
+}
+.wrapper .welcome .head img {
+  max-width: 200px;
+  margin-bottom: -10px;
+}
+.wrapper .welcome .main {
+}
+.wrapper .welcome .main img {
+  position: absolute;
+  max-width: 60px;
+  top: -90px;
+  left: 30px;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .wrapper .welcome .main img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.wrapper .welcome .main .info {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  margin-top: 60px;
+  padding: 30px 0px;
+}
+@media (max-width: 767px) {
+  .wrapper .welcome .main .info {
+    gap: 20px;
+  }
+}
+.wrapper .welcome .main .info span {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+}
+.wrapper .welcome .main .info span:first-of-type {
+  margin-bottom: 10px;
+}
+.wrapper .welcome .main .info span:last-of-type {
+  color: var(--grey-color);
+}
+.wrapper .welcome .main a {
+  margin: 20px 20px 60px auto;
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 500;
+  transition: var(--main-transition);
+}
+.wrapper .welcome .main a:hover {
+  background-color: var(--blue-alt-color);
+}
+/* End welcome */
+
+/* Start draft */
+.draft {
+}
+.draft h2 {
+}
+.draft p {
+}
+.draft input[type="text"] {
+  width: 100%;
+}
+.draft textarea {
+  height: 200px;
+  width: 100%;
+  resize: none;
+}
+.draft input[type="submit"] {
+  margin-left: auto;
+  padding: 5px 10px;
+}
+/* End draft */
+/* End wrapper */
+/* *******End Conent ********/
