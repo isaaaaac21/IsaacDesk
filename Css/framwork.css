@@ -41,6 +41,9 @@
 .d-grid {
   display: grid;
 }
+.gap-10 {
+  gap: 10px;
+}
 .gap-20 {
   gap: 20px;
 }
@@ -55,11 +58,15 @@
 .m-20 {
   margin: 20px;
 }
+
 .mt-0 {
   margin-top: 0;
 }
 .mt-5 {
   margin-top: 5px;
+}
+.mb-5 {
+  margin-bottom: 5px;
 }
 .mb-10 {
   margin-bottom: 10px;
@@ -97,6 +104,12 @@
 .bg-blue {
   background-color: var(--blue-color);
 }
+.bg-orange {
+  background-color: var(--orange-color);
+}
+.bg-green {
+  background-color: var(--green-color);
+}
 /* End Background */
 
 /* Start color */
@@ -109,6 +122,18 @@
 }
 .c-white {
   color: white;
+}
+.c-blue {
+  color: var(--blue-color);
+}
+.c-777 {
+  color: #777;
+}
+.c-orange {
+  color: var(--orange-color);
+}
+.c-green {
+  color: var(--green-color);
 }
 /* End color */
 
@@ -127,10 +152,19 @@
   }
 }
 .fs-14 {
-  font-size: 14;
+  font-size: 14px;
 }
 .fs-13 {
   font-size: 13px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fw-bold {
+  font-weight: bold;
+}
+.fw-500 {
+  font-weight: 500;
 }
 /* End font */
 /* Start Border */
@@ -168,8 +202,27 @@
 
   justify-content: space-between;
 }
+.center-flex {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
 
 .btn-shape {
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.wed-main-head h2 {
+  margin: 0px;
+  font-size: 25px;
+}
+.wed-main-head p {
+  color: var(--grey-color);
+  margin: 10px 0px 20px;
+  font-weight: 500;
 }
 /* end component */
 .ovr-hidden {

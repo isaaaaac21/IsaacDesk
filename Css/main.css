@@ -280,24 +280,87 @@ ul {
 /* End welcome */
 
 /* Start draft */
-.draft {
-}
-.draft h2 {
-}
-.draft p {
-}
-.draft input[type="text"] {
-  width: 100%;
-}
+
 .draft textarea {
   height: 200px;
-  width: 100%;
   resize: none;
 }
 .draft input[type="submit"] {
   margin-left: auto;
-  padding: 5px 10px;
+  cursor: pointer;
+}
+.draft input[type="submit"]:hover {
+  background-color: var(--blue-alt-color);
 }
 /* End draft */
+
+/* Start Yearly Target */
+
+.year-target .box .icn {
+  width: 80px;
+  height: 80px;
+}
+.year-target .box.mon .icn,
+.year-target .boxes .box.mon .info .percentage {
+  background-color: #0075ff35;
+}
+.year-target .box.proj .icn,
+.year-target .box.proj .info .percentage {
+  background-color: #f59e0b35;
+}
+.year-target .box.team .icn,
+.year-target .box.team .info .percentage {
+  background-color: #22c55e35;
+}
+.year-target .box .info {
+  flex: 1;
+}
+.year-target .box .info .percentage,
+.year-target .box .info .percentage span {
+  height: 4px;
+}
+.year-target .box .info .percentage span::before {
+  content: "";
+  border: 9px solid;
+  border-color: var(--blue-color) transparent transparent transparent;
+  position: absolute;
+  top: -13px;
+  right: -9px;
+  animation: hop 0.3s infinite alternate;
+}
+.year-target .box.proj .info .percentage span::before {
+  border-color: var(--orange-color) transparent transparent transparent;
+}
+.year-target .box.team .info .percentage span::before {
+  border-color: var(--green-color) transparent transparent transparent;
+}
+.year-target .box .info .percentage span::after {
+  content: attr(data-text);
+  width: fit-content;
+  background-color: var(--blue-color);
+
+  border-radius: 6px;
+  padding: 5px;
+  color: white;
+  font-size: 13px;
+  position: absolute;
+  top: -35px;
+  right: -18px;
+  animation: hop 0.3s infinite alternate;
+}
+
+.year-target .box.proj .info .percentage span::after {
+  background-color: var(--orange-color);
+}
+.year-target .box.team .info .percentage span::after {
+  background-color: var(--green-color);
+}
+/* End Yearly Target */
 /* End wrapper */
 /* *******End Conent ********/
+
+@keyframes hop {
+  to {
+    margin-top: -5px;
+  }
+}
