@@ -120,6 +120,9 @@
 .pt-20 {
   padding-top: 20px;
 }
+.pr-10 {
+  padding-right: 10px;
+}
 .pb-10 {
   padding-bottom: 10px;
 }
@@ -129,8 +132,8 @@
 .pb-30 {
   padding-bottom: 30px;
 }
-.pr-10 {
-  padding-right: 10px;
+.pl-20 {
+  padding-left: 20px;
 }
 /* End padding + margin */
 
@@ -199,6 +202,9 @@
   .text-c-mobile {
     text-align: center;
   }
+}
+.fs-11 {
+  font-size: 11px;
 }
 .fs-13 {
   font-size: 13px;

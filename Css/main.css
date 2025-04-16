@@ -118,6 +118,7 @@ ul {
 /* *******Start Conent ********/
 /* Start head */
 .content {
+  overflow: hidden;
 }
 .content .head {
 }
@@ -588,6 +589,91 @@ ul {
 }
 /* --End social media */
 /* End wrapper */
+
+/* start Table */
+.projects {
+}
+.projects .responsive-table {
+  overflow-x: auto;
+}
+
+.projects .responsive-table table {
+  text-align: left;
+  min-width: 1000px;
+  border-spacing: 0px;
+}
+.projects .responsive-table table thead {
+}
+.projects .responsive-table table tbody td {
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+
+  padding: 10px 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.projects .responsive-table table tbody td:last-of-type {
+  border-right: 1px solid #eee;
+}
+.projects .responsive-table table tbody tr:hover td {
+  background-color: #fafafa;
+}
+.projects .responsive-table table tbody td img {
+  border: 2px solid white;
+  max-width: 30px;
+}
+.projects .responsive-table table tbody td img:not(:first-of-type) {
+  margin-left: -20px;
+}
+/* End Table */
+
+/* Ennd Dashbord */
+
+/* Start Settings */
+.settings-page {
+}
+.settings-page .toggle-checkbox {
+  appearance: none;
+}
+.settings-page .toggle-switch {
+  background-color: #ccc;
+  width: 82px;
+  height: 28px;
+  border-radius: 16px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.settings-page .toggle-switch::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00d";
+  font-weight: 900;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  top: 4px;
+  left: 5px;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.settings-page .toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+
+.settings-page .toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  left: 56px;
+  color: var(--blue-color);
+  transition: 0.3s;
+  font-size: 13px;
+}
+/* End Settings */
 /* *******End Conent ********/
 
 @keyframes hop {
