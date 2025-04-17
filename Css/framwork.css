@@ -72,6 +72,9 @@
 .mt-10 {
   margin-top: 10px;
 }
+.mt-15 {
+  margin-top: 15px;
+}
 .mt-20 {
   margin-top: 20px;
 }
@@ -89,6 +92,9 @@
 }
 .mb-10 {
   margin-bottom: 10px;
+}
+.mb-15 {
+  margin-bottom: 15px;
 }
 .mb-20 {
   margin-bottom: 20px;
@@ -132,6 +138,10 @@
 .pb-30 {
   padding-bottom: 30px;
 }
+.pl-10 {
+  padding-left: 10px;
+}
+
 .pl-20 {
   padding-left: 20px;
 }
@@ -146,6 +156,12 @@
 }
 .bg-eee {
   background-color: #eee;
+}
+.bg-ddd {
+  background-color: #ddd;
+}
+.bg-fa {
+  background-color: #fafafa;
 }
 .bg-blue {
   background-color: var(--blue-color);
@@ -206,6 +222,9 @@
 .fs-11 {
   font-size: 11px;
 }
+.fs-12 {
+  font-size: 12px;
+}
 .fs-13 {
   font-size: 13px;
 }
@@ -254,6 +273,12 @@
 .bor-none {
   border: none;
 }
+.bor-ccc {
+  border: 1px solid #ccc;
+}
+.bor-b-ccc {
+  border-bottom: 1px solid #ccc;
+}
 /* End Border */
 
 /* Start Mobile */
@@ -293,6 +318,10 @@
 .btn-shape {
   padding: 4px 10px;
   border-radius: 6px;
+  transition: 0.3s;
+}
+.btn-hover:hover {
+  background-color: var(--blue-alt-color);
 }
 
 .wed-main-head h2 {
@@ -303,8 +332,9 @@
   color: var(--grey-color);
   margin: 10px 0px 20px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
 }
+
 /* end component */
 .ovr-hidden {
   overflow: hidden;
