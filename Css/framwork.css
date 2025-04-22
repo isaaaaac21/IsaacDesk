@@ -30,6 +30,9 @@
 .justify-around {
   justify-content: space-around;
 }
+.f-wrap {
+  flex-wrap: wrap;
+}
 @media (max-width: 767px) {
   .col-mobile {
     flex-direction: column;
@@ -157,6 +160,9 @@
 .bg-eee {
   background-color: #eee;
 }
+.bg-ccc {
+  background-color: #ccc;
+}
 .bg-ddd {
   background-color: #ddd;
 }
@@ -276,8 +282,14 @@
 .bor-ccc {
   border: 1px solid #ccc;
 }
+.bor-black {
+  border: 1px solid black;
+}
 .bor-b-ccc {
   border-bottom: 1px solid #ccc;
+}
+.bor-b-eee {
+  border-bottom: 1px solid #eee;
 }
 /* End Border */
 
@@ -314,14 +326,16 @@
 
   justify-content: center;
 }
-
+@media (max-width: 767px) {
+  .center-mobile {
+    display: flex;
+    justify-content: center;
+  }
+}
 .btn-shape {
   padding: 4px 10px;
   border-radius: 6px;
   transition: 0.3s;
-}
-.btn-hover:hover {
-  background-color: var(--blue-alt-color);
 }
 
 .wed-main-head h2 {

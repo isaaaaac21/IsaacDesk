@@ -644,11 +644,11 @@ ul {
 
 /* -----Toggle switch */
 
-.settings-page .toggle-checkbox {
+.toggle-checkbox {
   appearance: none;
   display: none;
 }
-.settings-page .toggle-switch {
+.toggle-switch {
   background-color: #ccc;
   width: 78px;
   height: 32px;
@@ -657,7 +657,7 @@ ul {
   transition: 0.3s;
   cursor: pointer;
 }
-.settings-page .toggle-switch::before {
+.toggle-switch::before {
   font-family: var(--fa-style-family-classic);
   content: "\f00d";
   font-weight: 900;
@@ -675,11 +675,11 @@ ul {
   transition: 0.3s;
 }
 
-.settings-page .toggle-checkbox:checked + .toggle-switch {
+.toggle-checkbox:checked + .toggle-switch {
   background-color: var(--blue-color);
 }
 
-.settings-page .toggle-checkbox:checked + .toggle-switch::before {
+.toggle-checkbox:checked + .toggle-switch::before {
   content: "\f00c";
   left: 50px;
   color: var(--blue-color);
@@ -714,11 +714,6 @@ ul {
 }
 /* End General info */
 /* Start Social-inf */
-
-.social-inf {
-}
-.social-inf .row {
-}
 .social-inf .row i {
   border-right: 1px solid #ccc;
   width: 38px;
@@ -779,9 +774,169 @@ ul {
   transform: scale(1.1) rotate(0deg);
 }
 /* End widget control */
-
+/* Start Back-up */
+@media (max-width: 767px) {
+  .backup .types {
+    flex-direction: column;
+  }
+}
+.backup > div input[type="radio"] {
+  display: none;
+}
+.backup > div label {
+  padding-left: 30px;
+  cursor: pointer;
+}
+.backup > div label::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #777;
+  left: 0;
+  border-radius: 50%;
+}
+.backup > div label::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  left: 5px;
+  bottom: 2px;
+  transition: var(--main-transition);
+  transform: scale(0);
+}
+.backup > div input[type="radio"]:checked + label::after {
+  transform: scale(1);
+}
+.backup > div input[type="radio"]:checked + label::before {
+  border-color: var(--blue-color);
+}
+.backup .types > div {
+  flex: 1;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.backup .types > div:hover {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+@media (max-width: 767px) {
+  .backup .types > div {
+    width: 100%;
+  }
+}
+/* End Back-up */
 /* End Settings */
-/* *******End Conent ********/
+
+/* Start Profile */
+.profile {
+}
+
+/* Start general-info */
+.profile .general-info {
+}
+.profile .general-info .general-head {
+  height: fit-content;
+  flex-basis: 200px;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .profile .general-info .general-head {
+    border-right: 1px solid #ccc;
+  }
+}
+.profile .general-info .general-head img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+.profile .general-info .general-head .line {
+  width: 120px;
+  height: 5px;
+}
+.profile .general-info .general-head .line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100px;
+  background-color: var(--blue-color);
+}
+.profile .general-info .general-head .stars {
+  color: rgb(255, 196, 0);
+}
+/* End general info */
+/* Start other Info */
+.profile .other-info {
+  flex: 1;
+}
+.profile .other-info .box {
+  transition: var(--main-transition);
+}
+.profile .other-info .box:hover {
+  background-color: #f9f9f9;
+}
+.profile .other-info .box > div {
+  min-width: 250px;
+  padding-top: 10px;
+}
+@media (max-width: 767px) {
+  .profile .other-info .box > div {
+    min-width: 200px;
+    padding-top: 10px;
+  }
+}
+.profile .other-info .toggle-switch {
+  height: 20px;
+}
+.profile .other-info .toggle-switch::before {
+  height: 12px;
+  width: 12px;
+  font-size: 8px;
+}
+.profile .toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--red-color);
+}
+.profile .other-info .toggle-checkbox:checked + .toggle-switch::before {
+  left: 62px;
+  color: var(--red-color);
+}
+/* End other Info */
+/* End generalInfo */
+
+/* --start Skills */
+.profile .sub-info .skills {
+  flex: 1;
+}
+.profile .sub-info .acts {
+  flex: 2;
+}
+.profile .sub-info .acts .row img {
+  max-width: 62px;
+}
+.profile .sub-info .acts .info {
+  flex: 1;
+}
+.profile .sub-info .acts .info .time {
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .profile .sub-info .acts .info .time {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .profile .sub-info .acts .info .time .date {
+    margin-top: 5px;
+  }
+}
+.profile .sub-info .acts .info .time {
+}
+/* --End Skills */
+/* End Profile */
+
+/* *******End Conetnt ********/
 
 @keyframes hop {
   to {
