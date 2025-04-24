@@ -935,7 +935,83 @@ ul {
 }
 /* --End Skills */
 /* End Profile */
+/* Start Projects */
+.projects-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+@media (max-width: 767px) {
+  .projects-page {
+    grid-template-columns: 1fr;
+  }
+}
+.projects-page .project .head span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
 
+.projects-page .project .imgs img:not(:first-of-type) {
+  border: 1px solid white;
+  margin-left: -10px;
+}
+.projects-page .project .imgs img:hover {
+  z-index: 1;
+}
+.projects-page .project .services {
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .projects-page .project .services {
+    text-align: center;
+  }
+  .projects-page .project .services span {
+    display: block;
+    width: fit-content;
+    margin: 0px auto 10px;
+  }
+}
+.projects-page .project .foot .progress {
+  width: 180px;
+  height: 7px;
+}
+@media (max-width: 767px) {
+  .projects-page .project .foot .progress {
+    margin-bottom: 10px;
+  }
+}
+.projects-page .project .foot .progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+/* End Projects */
+/* Start Courses */
+.courses {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media (max-width: 767px) {
+  .courses {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+.courses .course .imgs {
+}
+.courses .course .imgs img:first-of-type {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border: 2px solid white;
+}
+.courses .course .foot {
+}
+.courses .course .foot > span {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* End Courses */
 /* *******End Conetnt ********/
 
 @keyframes hop {
