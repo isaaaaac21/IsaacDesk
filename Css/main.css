@@ -995,16 +995,14 @@ ul {
     grid-template-columns: minmax(200px, 1fr);
   }
 }
-.courses .course .imgs {
-}
+
 .courses .course .imgs img:first-of-type {
   position: absolute;
   top: 15px;
   left: 15px;
   border: 2px solid white;
 }
-.courses .course .foot {
-}
+
 .courses .course .foot > span {
   position: absolute;
   top: -13px;
@@ -1012,6 +1010,41 @@ ul {
   transform: translateX(-50%);
 }
 /* End Courses */
+/* Start Friends */
+.friends {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media (max-width: 767px) {
+  .friends {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+.friend {
+  transition: var(--main-transition);
+}
+.friend:hover {
+  transform: scale(1.03);
+  background-color: black;
+  color: wheat;
+}
+.friend .icns > span {
+  width: fit-content;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.friend .icns > span:hover {
+  background-color: wheat;
+  color: black;
+}
+.friend .info .vip {
+  font-size: 40px;
+  color: var(--orange-color);
+  opacity: 0.2;
+}
+.friend .foot a {
+  cursor: pointer;
+}
+/* End Friends */
 /* *******End Conetnt ********/
 
 @keyframes hop {
