@@ -1045,6 +1045,69 @@ ul {
   cursor: pointer;
 }
 /* End Friends */
+/* Start Files Page */
+.files-page {
+}
+@media (max-width: 767px) {
+  .files-page {
+    flex-direction: column-reverse;
+  }
+}
+.files-page .files {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  flex-grow: 3;
+}
+.files-page .files {
+}
+.files-page .files .file .image img {
+  max-width: 65px;
+  transition: var(--main-transition);
+}
+.files-page .files .file:hover img {
+  transform: rotate(5deg);
+}
+.files-page .files .file .image p {
+  text-align: left;
+}
+
+@media (min-width: 767px) {
+  .files-page .files-stats {
+    min-width: 260px;
+    align-self: flex-start;
+  }
+}
+.files-page .files-stats .stat i.blue {
+  background-color: #0077ff3a;
+  color: var(--blue-color);
+}
+.files-page .files-stats .stat i.green {
+  background-color: #22c55e3a;
+  color: var(--green-color);
+}
+.files-page .files-stats .stat i.red {
+  background-color: #f4433625;
+  color: var(--red-color);
+}
+.files-page .files-stats .stat i.orange {
+  background-color: #f59e0b25;
+  color: var(--orange-color);
+}
+.files-page .files-stats .stat .text {
+  flex-grow: 1;
+}
+.files-page .files-stats a {
+  margin: 10px auto;
+}
+.files-page .files-stats a:hover {
+  background-color: var(--blue-alt-color);
+}
+.files-page .files-stats a i {
+  display: block;
+}
+.files-page .files-stats a:hover > i {
+  animation: ihop 0.3s ease infinite alternate;
+}
+/* End Files Page */
 /* *******End Conetnt ********/
 
 @keyframes hop {
@@ -1065,5 +1128,10 @@ ul {
 @keyframes showing {
   to {
     background-color: var(--blue-color);
+  }
+}
+@keyframes ihop {
+  to {
+    margin-top: -5px;
   }
 }
