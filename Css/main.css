@@ -1108,6 +1108,85 @@ ul {
   animation: ihop 0.3s ease infinite alternate;
 }
 /* End Files Page */
+
+/* Start plans page */
+.plans-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+@media (max-width: 767px) {
+  .plans-page {
+    grid-template-columns: 1fr;
+  }
+}
+.plans-page .plan .head {
+  border: 2px solid White;
+}
+.plans-page .plan.free .head {
+  outline: 2px solid var(--green-color);
+}
+.plans-page .plan.basic .head {
+  outline: 2px solid var(--blue-color);
+}
+.plans-page .plan.basic .head::before {
+  content: "Popular";
+  position: absolute;
+  font-weight: bold;
+  width: fit-content;
+  background-color: white;
+  color: var(--blue-color);
+  padding: 5px 20px 5px 5px;
+  top: 15px;
+  left: 0px;
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .plans-page .plan.basic .head::before {
+    writing-mode: vertical-lr;
+    padding: 5px 5px 20px 5px;
+    top: 0;
+    left: 10px;
+  }
+}
+.plans-page .plan.basic .head::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 16.5px;
+  left: 69px;
+  border: 12px solid black;
+  border-color: transparent transparent var(--blue-color) var(--blue-color);
+  transform: rotate(45deg);
+}
+@media (max-width: 767px) {
+  .plans-page .plan.basic .head::after {
+    top: 70px;
+    left: 11px;
+    transform: rotate(135deg);
+  }
+}
+.plans-page .plan.prem .head {
+  outline: 2px solid var(--orange-color);
+}
+.plans-page .plan .head h2 {
+  letter-spacing: -1px;
+}
+.plans-page .plan .head p {
+  margin: 5px auto 0px;
+}
+.plans-page .plan .head p::before {
+  content: "$";
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  font-size: 30px;
+}
+.plans-page .plan ul li .feat {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+/* End  plans page */
 /* *******End Conetnt ********/
 
 @keyframes hop {
